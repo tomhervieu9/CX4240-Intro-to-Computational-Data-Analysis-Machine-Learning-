@@ -1,0 +1,18 @@
+To begin, we see that the buld of the area under the curve resides in the first 3 top eigenvectors.
+So, we would initially be inclined to choose k=3. However, when it comes to visualizing a face, details
+are important for recognizing one in particular. Thus, k=40 (meaning choosing the top 40 eigenvectors), 
+is around the point where we can begin to make clear distinctions between individual faces.
+
+Reconstrction Error: 
+62.803 for the first image and 61.19286 for the second image. 
+
+I realized that I received pretty high errors, although I was unable to find where I went wrong in the code that I wrote.
+
+Possible errors in my code were the mu was supposed to be (45001) but did not work unders such a context.
+Also, vect.dot(xc).dot(vect.T) was unabel to be performed due to dimensional problems. Therefore, overall my error wa high.
+However, I did notice that for a larger k, the error went down, which shows that selecting more eigenvectors increases the compressed
+size but also the accuracy of the reconstructed image.
+
+I completed PCA for k = 2 and k = 20
+We see a clear distinction in that K=20 looks somehwat sharper and more accurate than k = 2. Unfortunately, due to the error in 
+part of my PCA, k = 20 is still relatively innacurate.
